@@ -39,14 +39,14 @@ qMAP.MH.single_family - to identify individual sncRNA species that contribute to
 In example runs, `output = "temp"` is used to avoid writing files during checks. In real analyses, you may provide a file path or let the function auto-name the output (see manual).
 }
 \examples{
-# Note:  After installation, one can find the example files in "../qMAPModules/extdata/"
-# To run on a specific input, provide the full path as: qMAPModules(a = "/path/to/your_matrix.txt")
-sample_matrix_1 <- system.file("extdata", "sample_matrix1.txt", package = "qMAPModules")
-sample_matrix_2 <- system.file("extdata", "sample_matrix2.txt", package = "qMAPModules")
-sample_matrix_3 <- system.file("extdata", "sample_matrix3.txt", package = "qMAPModules")
-mouse_gtsrna_list <- system.file("extdata", "mmu_gtsrna.txt", package = "qMAPModules")
-mouse_rRNAs <- system.file("extdata", "mouse_rRNAs.fa", package = "qMAPModules")
-mouse_tRNAs <- system.file("extdata", "mm10-tRNAs_CCA.fa", package = "qMAPModules")
+# Note:  After installation, one can find the example files in "../qMAP/extdata/"
+# To run on a specific input, provide the full path as: qMAP(a = "/path/to/your_matrix.txt")
+sample_matrix_1 <- system.file("extdata", "sample_matrix1.txt", package = "qMAP")
+sample_matrix_2 <- system.file("extdata", "sample_matrix2.txt", package = "qMAP")
+sample_matrix_3 <- system.file("extdata", "sample_matrix3.txt", package = "qMAP")
+mouse_gtsrna_list <- system.file("extdata", "mmu_gtsrna.txt", package = "qMAP")
+mouse_rRNAs <- system.file("extdata", "mouse_rRNAs.fa", package = "qMAP")
+mouse_tRNAs <- system.file("extdata", "mm10-tRNAs_CCA.fa", package = "qMAP")
 # Run the identification of sncRNA species contributing to the differential fragmentation of 5S-rRNA
 # family using corresponding FASTA sequence in the user provided parental rna file (mouse_rRNAs.fa)
 # by mapping sequence reads in the query read-count matrix file (sample_matrix1.txt) comprising read

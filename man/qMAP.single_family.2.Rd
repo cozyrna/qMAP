@@ -2,7 +2,7 @@
 % Please edit documentation in R/qMAP.R
 \name{qMAP.single_family.2}
 \alias{qMAP.single_family.2}
-\title{Run qMAP on sncRNA data frame (in-memory)}
+\title{qMAP.single_family.2 - Run qMAP on sncRNA data frame (in-memory)}
 \usage{
 qMAP.single_family.2(input_dataframe, ...)
 }

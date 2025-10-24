@@ -1,13 +1,13 @@
 #!/usr/bin/Rscript
 
-##' @name qMAPModules
-##' @rdname qMAPModules
-##' @title qMAP -quantitative mapping for differential fragmentation of small non-coding RNAs
+##' @name qMAP
+##' @rdname qMAP
+##' @title qMAP - quantitative mapping for differential fragmentation of small non-coding RNAs
 ##' @details
 ##' For more information, see the user manual:
-##' \code{browseURL(system.file("docs/qMAP_v1.0.0_User_Manual.pdf", package = "qMAPModules"))}
+##' \code{browseURL(system.file("docs/qMAP_v1.0.0_User_Manual.pdf", package = "qMAP"))}
 ##'
-##' After installing the package qMAPModules, call the library as: library(qMAPModules).
+##' After installing the package qMAP, call the library as: library(qMAP).
 ##'
 ##' There are two modules or main functions in this package : qMAP and qMAP_mh. qMAP has two model/methods: Model1 and Model2
 ##'
@@ -15,7 +15,7 @@
 ##' \cr ?qMAP.single_family
 ##' \cr ?qMAP.MH.single_family
 ##'
-##' If want to run examples, it is necessary to set working directory to the base folder of the installed package qMAPModules. Such as : setwd("/home/..../R/.../qMAPModules/").
+##' If want to run examples, it is necessary to set working directory to the base folder of the installed package qMAP. Such as : setwd("/home/..../R/.../qMAP/").
 ##'
 ##' @param matrix_file A user-provided read-count matrix where the first and second columns are labeled as "Sequence" and "Annotation", respectively. The remaining columns contain read counts from different samples under study.
 ##' @param cl A sample classification vector allowing only two groups: 1 for controls, 2 for cases, and -1 for the samples to be excluded from the analysis.
@@ -34,7 +34,7 @@
 #' @importFrom utils read.delim combn write.table
 NULL
 #'
-#' Run qMAP on sncRNA matrix file (file-based input)
+#' qMAP.single_family.1 - Run qMAP on sncRNA matrix file (file-based input)
 #'
 #' This is a variant for 'qMAP.single_family( )' that reads the input matrix from a file.
 #'
@@ -46,7 +46,7 @@ NULL
 qMAP.single_family.1 <- function(input_file, ...) {
   qMAP.single_family(function() read.delim(input_file), ...)
 }
-#' Run qMAP on sncRNA data frame (in-memory)
+#' qMAP.single_family.2 - Run qMAP on sncRNA data frame (in-memory)
 #'
 #' This is a variant for 'qMAP.single_family( )' where the matrix is already in memory as a data frame.
 #'
@@ -73,14 +73,14 @@ qMAP.single_family.2 <- function(input_dataframe, ...) {
 #' @note In example runs, `output = "temp"` is used to avoid writing files during checks. In real analyses, you may provide a file path or let the function auto-name the output (see manual).
 #'
 #' @examples
-#' # Note:  After installation, one can find the example files in "../qMAPModules/extdata/"
-#' # To run on a specific input, provide the full path as: qMAPModules(a = "/path/to/your_matrix.txt")
-#' sample_matrix_1 <- system.file("extdata", "sample_matrix1.txt", package = "qMAPModules")
-#' sample_matrix_2 <- system.file("extdata", "sample_matrix2.txt", package = "qMAPModules")
-#' sample_matrix_3 <- system.file("extdata", "sample_matrix3.txt", package = "qMAPModules")
-#' mouse_gtsrna_list <- system.file("extdata", "mmu_gtsrna.txt", package = "qMAPModules")
-#' mouse_rRNAs <- system.file("extdata", "mouse_rRNAs.fa", package = "qMAPModules")
-#' mouse_tRNAs <- system.file("extdata", "mm10-tRNAs_CCA.fa", package = "qMAPModules")
+#' # Note:  After installation, one can find the example files in "../qMAP/extdata/"
+#' # To run on a specific input, provide the full path as: qMAP(a = "/path/to/your_matrix.txt")
+#' sample_matrix_1 <- system.file("extdata", "sample_matrix1.txt", package = "qMAP")
+#' sample_matrix_2 <- system.file("extdata", "sample_matrix2.txt", package = "qMAP")
+#' sample_matrix_3 <- system.file("extdata", "sample_matrix3.txt", package = "qMAP")
+#' mouse_gtsrna_list <- system.file("extdata", "mmu_gtsrna.txt", package = "qMAP")
+#' mouse_rRNAs <- system.file("extdata", "mouse_rRNAs.fa", package = "qMAP")
+#' mouse_tRNAs <- system.file("extdata", "mm10-tRNAs_CCA.fa", package = "qMAP")
 #' # Run differential fragmentation analysis for 5S-rRNA family using  corresponding FASTA sequence
 #' # in the user provided parental rna file (mouse_rRNAs.fa) by mapping sequencing reads in the query
 #' # read-count matrix file (sample_matrix1.txt) comprising read counts for 5 control (cl = 1) and
@@ -486,7 +486,7 @@ qMAP.single_family <- function(matrix_file, cl, sncrna_family, parental_rna_file
 ########## qMAP function ends ##########
 
 
-#' Run qMAP.MH on sncRNA matrix file (file-based input)
+#' qMAP.MH.single_family.1 - Run qMAP.MH on sncRNA matrix file (file-based input)
 #'
 #' This is a variant for 'qMAP.MH.single_family( )' that reads the input matrix from a file.
 #'
@@ -498,7 +498,7 @@ qMAP.single_family <- function(matrix_file, cl, sncrna_family, parental_rna_file
 qMAP.MH.single_family.1 <- function(input_file, ...) {
   qMAP.MH.single_family(function() read.delim(input_file), ...)
 }
-#' Run qMAP.MH on sncRNA data frame (in-memory)
+#' qMAP.MH.single_family.2 - Run qMAP.MH on sncRNA data frame (in-memory)
 #'
 #' This is a variant for 'qMAP.MH.single_family( )' where the matrix is already in memory as a data frame.
 #'
@@ -524,14 +524,14 @@ qMAP.MH.single_family.2 <- function(input_dataframe, ...) {
 #' @note In example runs, `output = "temp"` is used to avoid writing files during checks. In real analyses, you may provide a file path or let the function auto-name the output (see manual).
 #'
 #' @examples
-#' # Note:  After installation, one can find the example files in "../qMAPModules/extdata/"
-#' # To run on a specific input, provide the full path as: qMAPModules(a = "/path/to/your_matrix.txt")
-#' sample_matrix_1 <- system.file("extdata", "sample_matrix1.txt", package = "qMAPModules")
-#' sample_matrix_2 <- system.file("extdata", "sample_matrix2.txt", package = "qMAPModules")
-#' sample_matrix_3 <- system.file("extdata", "sample_matrix3.txt", package = "qMAPModules")
-#' mouse_gtsrna_list <- system.file("extdata", "mmu_gtsrna.txt", package = "qMAPModules")
-#' mouse_rRNAs <- system.file("extdata", "mouse_rRNAs.fa", package = "qMAPModules")
-#' mouse_tRNAs <- system.file("extdata", "mm10-tRNAs_CCA.fa", package = "qMAPModules")
+#' # Note:  After installation, one can find the example files in "../qMAP/extdata/"
+#' # To run on a specific input, provide the full path as: qMAP(a = "/path/to/your_matrix.txt")
+#' sample_matrix_1 <- system.file("extdata", "sample_matrix1.txt", package = "qMAP")
+#' sample_matrix_2 <- system.file("extdata", "sample_matrix2.txt", package = "qMAP")
+#' sample_matrix_3 <- system.file("extdata", "sample_matrix3.txt", package = "qMAP")
+#' mouse_gtsrna_list <- system.file("extdata", "mmu_gtsrna.txt", package = "qMAP")
+#' mouse_rRNAs <- system.file("extdata", "mouse_rRNAs.fa", package = "qMAP")
+#' mouse_tRNAs <- system.file("extdata", "mm10-tRNAs_CCA.fa", package = "qMAP")
 #' # Run the identification of sncRNA species contributing to the differential fragmentation of 5S-rRNA
 #' # family using corresponding FASTA sequence in the user provided parental rna file (mouse_rRNAs.fa)
 #' # by mapping sequence reads in the query read-count matrix file (sample_matrix1.txt) comprising read

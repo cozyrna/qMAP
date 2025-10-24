@@ -2,7 +2,7 @@
 % Please edit documentation in R/qMAP.R
 \name{qMAP.single_family.1}
 \alias{qMAP.single_family.1}
-\title{Run qMAP on sncRNA matrix file (file-based input)}
+\title{qMAP.single_family.1 - Run qMAP on sncRNA matrix file (file-based input)}
 \usage{
 qMAP.single_family.1(input_file, ...)
 }
