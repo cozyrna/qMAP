@@ -1,0 +1,26 @@
+Package: qMAP
+Type: Package
+Title: qMAP - quantitative mapping for differential fragmentation of small non-coding RNAs
+Version: 1.0.0
+Authors@R: c(
+    person("Hukam", "Rawal", role = "aut", comment = c(ORCID = "0000-0002-2727-9721")),
+    person("Qi", "Chen", role = "aut"),
+    person("Tong", "Zhou", email = "tongz@med.unr.edu", role = c("aut", "cre")))
+Maintainer: Tong Zhou <tongz@med.unr.edu>
+usethis: :use_package("Biostrings"", "dplyr", "rlang", seqinr"","stats", "utils", "usethis") 
+Imports:
+    Biostrings,
+    dplyr,
+    rlang,
+    seqinr,
+    stats,
+    utils,
+    usethis
+Description: qMAP detects differentially fragmented parental RNAs under specific conditions. qMAP tool, which consists of two computational strategies (i.e., Model 1 and Model 2) and is based on the sequencing reads mapped to parental RNAs. 
+	Additionally, a qMAP_mh module is developed, which identifies specific sncRNA species contributing to differential fragmentation by applying Mantel-Haenszel test to sequencing read distributions along parental RNAs across different conditions.
+License: GPL-3 + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.3.3
+NeedsCompilation: no
+Author: Hukam Rawal [aut] (<https://orcid.org/0000-0002-2727-9721>), Qi Chen [aut], Tong Zhou [aut, cre]
+DOI: 

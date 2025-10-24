@@ -1,0 +1,2 @@
+parental_rna	mean_diff	p	species_num
+16S-rRNA	0.22634750743145	2.70939573515762e-05	23
