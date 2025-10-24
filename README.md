@@ -47,15 +47,15 @@ There are two variants of each of these two modules for a single sncRNA family:
 
 1. Function call with read-count matrix file path as input:
    
-      qMAP.single_family.1(input_file, ...)
+      	qMAP.single_family.1(input_file, ...)
    
-      qMAP.MH.single_family.1(input_file, ...) 
+      	qMAP.MH.single_family.1(input_file, ...) 
 
 2. Function call with read-count matrix as a data frame as input:      
  
-      qMAP.single_family.2(input_dataframe, ...)
+      	qMAP.single_family.2(input_dataframe, ...)
    
-      qMAP.MH.single_family.2(input_dataframe, ...) 
+      	qMAP.MH.single_family.2(input_dataframe, ...) 
                                                                       
 The second variant is useful when one has to call qMAP or qMAP_mh function for multiple sncRNA families. 
 
