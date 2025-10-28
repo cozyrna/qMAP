@@ -2,7 +2,7 @@
 % Please edit documentation in R/qMAP.R
 \name{qMAP}
 \alias{qMAP}
-\title{qMAP - quantitative mapping for differential fragmentation of small non-coding RNAs}
+\title{qMAP - quantitative mapping for RNA differential fragmentation}
 \arguments{
 \item{matrix_file}{A user-provided read-count matrix where the first and second columns are labeled as "Sequence" and "Annotation", respectively. The remaining columns contain read counts from different samples under study.}
 
@@ -20,7 +20,7 @@ with qMAP.single_family, it will return, for each queried parental RNA (sncrna_f
 with qMAP.MH.single_family, it will return, for each queried parental RNA (sncrna_family), an output data-frame with sequence (the sncRNA species sequence), or (the odds ratio), p (the P-value inferred from the Mantel-Haenszel statistic), and start (the start position on the parental RNA where the sncRNA species is mapped).
 }
 \description{
-qMAP - quantitative mapping for differential fragmentation of small non-coding RNAs
+qMAP - quantitative mapping for RNA differential fragmentation
 }
 \details{
 For more information, see the user manual:

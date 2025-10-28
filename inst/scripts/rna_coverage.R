@@ -64,12 +64,12 @@ rna.coverage <- function(matrix_file, sncrna_family, parental_rna, max.mismatch 
   start = start[!is.na(start)]
   len = nchar(rownames(e_tmp))
 
-  if (nrow(e_tmp) == 0) 
+  if (nrow(e_tmp) == 0)
   {
     print("No sncRNA species from the query matrix were mapped to the parental RNA")
     return(NULL)
   }
-  
+
   coverage = c()
   for (i in 1:ncol(e_tmp))
   {
@@ -81,7 +81,8 @@ rna.coverage <- function(matrix_file, sncrna_family, parental_rna, max.mismatch 
   return(coverage)
 }
 
-matrix_file = "sample_matrix1.txt"
+matrix_file = "./extdata/sample_matrix1.txt"
 sncrna_family = "5S-rRNA"
 parental_rna = "GTCTACGGCCATACCACCCTGAACGCGCCCGATCTCGTCTGATCTCGGAAGCTAAGCAGGGTCGGGCCTGGTTAGTACTTGGATGGGAGACCGCCTGGGAATACCGGGTGCTGTAGGCTTT"
 coverage = rna.coverage(matrix_file, sncrna_family, parental_rna)
+print(coverage)

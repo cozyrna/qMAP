@@ -1,6 +1,6 @@
 Package: qMAP
 Type: Package
-Title: qMAP - quantitative mapping for differential fragmentation of small non-coding RNAs
+Title: qMAP - quantitative mapping for RNA differential fragmentation
 Version: 1.0.0
 Authors@R: c(
     person("Hukam", "Rawal", role = "aut", comment = c(ORCID = "0000-0002-2727-9721")),

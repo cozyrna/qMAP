@@ -1,7 +1,7 @@
 
 [User Manual](inst/docs/qMAP_v1.0.0_User_Manual.pdf)
 
-# qMAP (quantitative mapping for differential fragmentation of small non-coding RNAs) Version 1.0.0
+# qMAP (quantitative mapping for RNA differential fragmentation) Version 1.0.0
 
 ## Install instructions:
 
@@ -77,5 +77,3 @@ The second variant is useful when one has to call qMAP or qMAP_mh function for m
 
 To run for multiple families, see example runs mentioned in the user manual.
 
-## Citation:
-Rawal HC, Chen Q, Zhou T. **_qMAP: quantitative mapping for differential fragmentation of small non-coding RNAs.** _Journal_, Year; Page. https://doi.org/xxxxxxxxx

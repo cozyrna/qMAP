@@ -2,7 +2,7 @@
 
 ##' @name qMAP
 ##' @rdname qMAP
-##' @title qMAP - quantitative mapping for differential fragmentation of small non-coding RNAs
+##' @title qMAP - quantitative mapping for RNA differential fragmentation
 ##' @details
 ##' For more information, see the user manual:
 ##' \code{browseURL(system.file("docs/qMAP_v1.0.0_User_Manual.pdf", package = "qMAP"))}
