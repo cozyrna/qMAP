@@ -7,7 +7,7 @@
 
 #### To install qMAP directly from GitHub, run the following command in R:
 
-      install.packages(“remotes”)
+      install.packages("remotes")
 
       remotes::install_github("cozyrna/qMAP")
 
